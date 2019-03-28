@@ -17,12 +17,14 @@ namespace API.Controllers
         private DBase db = new DBase();
 
         // GET: api/Contacts
+        [Route("GetAllContacts")]
         public IQueryable<Contact> GetContacts()
         {
             return db.Contacts;
         }
 
         // GET: api/Contacts/5
+        [Route("GetContactById")]
         [ResponseType(typeof(Contact))]
         public IHttpActionResult GetContact(int id)
         {
@@ -36,6 +38,7 @@ namespace API.Controllers
         }
 
         // PUT: api/Contacts/5
+        [Route("UpdateContact")]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutContact(int id, Contact contact)
         {
@@ -71,6 +74,7 @@ namespace API.Controllers
         }
 
         // POST: api/Contacts
+        [Route("CreateContact")]
         [ResponseType(typeof(Contact))]
         public IHttpActionResult PostContact(Contact contact)
         {
@@ -86,6 +90,7 @@ namespace API.Controllers
         }
 
         // DELETE: api/Contacts/5
+        [Route("RemoveContact")]
         [ResponseType(typeof(Contact))]
         public IHttpActionResult DeleteContact(int id)
         {
