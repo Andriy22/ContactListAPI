@@ -86,7 +86,7 @@ namespace API.Controllers
             db.Contacts.Add(contact);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = contact.Id }, contact);
+            return Ok(contact);
         }
 
         // DELETE: api/Contacts/5

@@ -23,7 +23,7 @@ namespace API
 
          public virtual DbSet<Contact> Contacts { get; set; }
     }
-
+     
     public class Contact
     {
         public int Id { get; set; }
@@ -32,5 +32,6 @@ namespace API
         public DateTime BirthDay { get; set; }
         public string Ava { get; set; }
         public string Phone { get; set; }
+        public bool isBlocked { get; set; }
     }
 }
